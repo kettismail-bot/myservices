@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holdee Marketer | Катя Чукіна - Стратегія для малого бізнесу</title>
+    <title>Катя Чукіна | Маркетолог-стратег для малого бізнесу</title>
     
     <!-- Підключення шрифтів -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,40 +88,35 @@
         .custom-list-green li::before {
             color: #aed98a;
         }
+
+        /* Сховати скролбар для навігації на мобільних */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="font-inter leading-relaxed selection:bg-accentBlue selection:text-white">
 
     <!-- Header -->
     <header class="fixed w-full top-0 bg-white/95 backdrop-blur-md z-50 border-b border-borderGray/50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-manrope font-bold text-xl tracking-tight">Holdee <span class="text-accentBlue">marketer</span></div>
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-4">
             
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex gap-8 text-sm font-medium text-graphite/80">
-                <a href="#consultations" class="hover:text-accentBlue transition-colors">Консультації</a>
-                <a href="#group" class="hover:text-accentBlue transition-colors">Бренд-Шторм</a>
-                <a href="#mentorship" class="hover:text-accentGreen transition-colors">Бренд-система: 1на1</a>
+            <!-- Always Visible Nav -->
+            <nav class="flex justify-between md:justify-start gap-4 sm:gap-10 md:gap-16 text-[14px] md:text-base font-semibold text-graphite/90 overflow-x-auto no-scrollbar w-full md:flex-grow">
+                <a href="#consultations" class="hover:text-accentBlue transition-colors whitespace-nowrap">Консультації</a>
+                <a href="#group" class="hover:text-accentBlue transition-colors whitespace-nowrap">Бренд-Шторм</a>
+                <a href="#mentorship" class="hover:text-accentGreen transition-colors whitespace-nowrap">Бренд-система: 1на1</a>
             </nav>
+
+            <a href="https://www.instagram.com/holdee/" target="_blank" class="bg-graphite text-white px-5 py-2.5 rounded-sm text-sm font-medium hover:bg-graphite/90 transition-colors shadow-sm hidden md:inline-block whitespace-nowrap shrink-0">
+                Написати в Direct
+            </a>
             
-            <div class="flex items-center gap-4">
-                <a href="https://www.instagram.com/holdee/" target="_blank" class="hidden sm:inline-block bg-graphite text-white px-5 py-2.5 rounded-sm text-sm font-medium hover:bg-graphite/90 transition-colors shadow-sm">
-                    Написати в Direct
-                </a>
-                <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" class="md:hidden text-graphite text-2xl focus:outline-none">
-                    <i class="ph ph-list"></i>
-                </button>
-            </div>
         </div>
-        
-        <!-- Mobile Nav -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-borderGray/50 flex-col px-6 py-4 space-y-4 shadow-lg absolute w-full">
-            <a href="#consultations" class="block font-medium text-graphite hover:text-accentBlue mobile-link">Консультації</a>
-            <a href="#group" class="block font-medium text-graphite hover:text-accentBlue mobile-link">Бренд-Шторм</a>
-            <a href="#mentorship" class="block font-medium text-graphite hover:text-accentGreen mobile-link">Бренд-система: 1на1</a>
-            <a href="https://www.instagram.com/holdee/" target="_blank" class="block font-medium text-accentBlue mobile-link">Написати в Direct</a>
-        </nav>
     </header>
 
     <!-- Блок Позиціонування: Про мене та аудиторію (Новий перший екран) -->
@@ -133,7 +128,8 @@
                     <!-- Ліва частина: Хто я -->
                     <div class="lg:col-span-4">
                         <span class="text-accentBlue font-bold tracking-widest uppercase text-xs mb-3 block">Хто я</span>
-                        <h2 class="font-manrope text-4xl font-extrabold mb-4">Катя Чукіна</h2>
+                        <h2 class="font-manrope text-4xl font-extrabold mb-1">Катя Чукіна</h2>
+                        <div class="text-accentBlue font-medium text-lg mb-6">| маркетолог-стратег</div>
                         <p class="text-graphite/80 text-lg mb-6">Допомагаю мікро та малому бізнесу будувати систему в Інстаграм.</p>
                         
                         <div class="space-y-4">
@@ -150,17 +146,7 @@
                         <!-- Кому допомагаю -->
                         <div>
                             <h3 class="font-manrope text-xl font-bold mb-4 flex items-center gap-2">Для кого це 🎯</h3>
-                            <p class="text-sm text-graphite/70 mb-4">Власники маленьких бізнесів: свічковари, керамісти, миловари, ювеліри-початцівці, бренди одягу, флористи, компанії з майстер-класами, б'юті-майстри (манікюр, бровисти, косметологи), хендмейдери.</p>
-                            
-                            <div class="bg-accentBlue/5 p-4 rounded-lg border border-accentBlue/20 text-sm text-graphite/80">
-                                <strong class="block text-graphite mb-2">Ваша ситуація зараз:</strong>
-                                <ul class="space-y-2">
-                                    <li>- Маєте акаунт, але замовлень дуже мало.</li>
-                                    <li>- Запускали таргет чи купували рекламу у блогерів, але результату нуль (або аудиторія пішла).</li>
-                                    <li>- Наймали СММ-ників чи таргетологів і лише злили кошти.</li>
-                                    <li>- Хочете рости, але бракує знань, робочих схем і є страх, що все марно.</li>
-                                </ul>
-                            </div>
+                            <p class="text-sm text-graphite/70 mb-4">Власники маленьких бізнесів: свічковари, керамісти, миловари, ювеліри-початцівці, бренди одягу, флористи, компанії з локальними івентами, б'юті-майстри.</p>
                         </div>
 
                         <!-- З чим не працюю -->
@@ -191,7 +177,7 @@
     <!-- Варіанти співпраці (Швидке меню) -->
     <section class="py-12 px-6">
         <div class="max-w-6xl mx-auto fade-up">
-            <h2 class="font-manrope text-2xl md:text-3xl font-bold mb-8 text-center uppercase tracking-widest text-graphite/50 text-sm">Варіанти співпраці</h2>
+            <h2 class="font-manrope text-sm font-bold mb-8 text-center uppercase tracking-widest text-graphite/50">Варіанти співпраці</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Картка 1 -->
                 <a href="#consultations" class="group bg-lightGray p-8 rounded-xl border border-borderGray/50 hover:border-accentBlue transition-colors block">
@@ -217,7 +203,7 @@
     </section>
 
     <!-- Точкові рішення (Консультації) -->
-    <section id="consultations" class="py-24 px-6 border-t border-borderGray">
+    <section id="consultations" class="py-24 px-6 border-t border-borderGray scroll-mt-28">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16 fade-up">
                 <span class="text-accentBlue font-semibold tracking-wider uppercase text-sm mb-2 block">Точкові рішення</span>
@@ -238,7 +224,7 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-borderGray/50">
+                <div class="flex flex-col divide-y divide-borderGray/50">
                     <div class="p-8 md:p-12">
                         <h4 class="font-manrope font-bold text-xl mb-6 flex items-center gap-2">З якими запитами можна прийти 🕵️‍♀️</h4>
                         <ul class="space-y-4 text-graphite/80 custom-list">
@@ -266,7 +252,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-accentBlue/10 p-6 rounded-sm border border-accentBlue/20">
+                        <div class="bg-accentBlue/10 p-6 rounded-sm border border-accentBlue/20 max-w-3xl">
                             <h5 class="font-bold mb-3">Підійде, якщо:</h5>
                             <ul class="space-y-2 text-sm text-graphite/80 custom-list">
                                 <li>Тобі потрібне швидке рішення під твій запит, а не довге навчання.</li>
@@ -295,7 +281,7 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-borderGray/50">
+                <div class="flex flex-col divide-y divide-borderGray/50">
                     <div class="p-8 md:p-12">
                         <h4 class="font-manrope font-bold text-xl mb-6 flex items-center gap-2">Як ми працюємо 🎯</h4>
                         <ul class="space-y-4 text-graphite/80 custom-list-green mb-8">
@@ -304,7 +290,7 @@
                             <li><strong>Адаптація під твій запит.</strong> Ми працюємо над тим, що болить проєкту саме зараз. Чи то залучення нової аудиторії, чи то донесення цінності продукту, щоб його хотіли відмічати в естетичних профілях.</li>
                         </ul>
 
-                        <div class="bg-accentGreen/10 p-6 rounded-sm border border-accentGreen/20">
+                        <div class="bg-accentGreen/10 p-6 rounded-sm border border-accentGreen/20 max-w-3xl">
                             <h5 class="font-bold mb-3">Підійде, якщо:</h5>
                             <ul class="space-y-2 text-sm text-graphite/80 custom-list-green">
                                 <li>Тобі потрібен постійний зворотний зв'язок без обмежень та вказання на кожну точку росту.</li>
@@ -316,7 +302,7 @@
                     
                     <div class="p-8 md:p-12 bg-white/50">
                         <h4 class="font-manrope font-bold text-xl mb-6 flex items-center gap-2">Що ми робимо ці 2 тижні 📝</h4>
-                        <div class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
                             <div class="bg-white p-5 rounded-sm shadow-sm border border-borderGray/50">
                                 <strong class="text-graphite block mb-1">Відпрацьовуємо офери.</strong> 
                                 <span class="text-sm text-graphite/80">Пишемо пропозиції мовою твого клієнта, щоб вони закривали їхні реальні потреби та заперечення.</span>
@@ -345,9 +331,9 @@
     </section>
 
     <!-- Групова практика -->
-    <section id="group" class="py-24 md:py-32 px-6 bg-[#f0f4f7]">
-        <div class="max-w-6xl mx-auto fade-up">
-            <div class="text-center mb-16">
+    <section id="group" class="py-24 md:py-32 px-6 bg-[#f0f4f7] scroll-mt-28">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-up">
                 <span class="inline-block bg-accentBlue text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest mb-6">Групова практика</span>
                 <h2 class="font-manrope text-5xl md:text-6xl font-extrabold mb-8 text-graphite">БРЕНД-ШТОРМ 🌪️</h2>
                 <p class="text-xl text-graphite/80 max-w-4xl mx-auto leading-relaxed">
@@ -426,7 +412,7 @@
 
                         <div class="accordion-item border-b border-borderGray/50 p-4 cursor-pointer" onclick="this.classList.toggle('accordion-active')">
                             <div class="flex justify-between items-center font-bold text-lg">
-                                <span class="flex items-center gap-3"><span class="text-accentBlue">05.</span> Ефективний Трафік</span>
+                                <span class="flex items-center gap-3"><span class="text-accentBlue">05.</span> Ефективний трафік</span>
                                 <i class="ph ph-caret-down text-graphite/50 transition-transform"></i>
                             </div>
                             <div class="accordion-content text-graphite/70 mt-2">Аналіз сучасних інструментів залучення. Чому таргет зливає кошти і як це змінити.</div>
@@ -521,9 +507,9 @@
                 </div>
             </div>
 
-            <!-- Формат і ціна -->
+            <!-- Формат і ціна (Групова практика) -->
             <div class="mt-16 bg-graphite text-white rounded-xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-3/4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-3/4">
                     <div>
                         <div class="text-accentBlue/70 text-xs font-bold uppercase tracking-wider mb-2">Група</div>
                         <div class="font-medium">до 5 учасників</div>
@@ -535,10 +521,6 @@
                     <div>
                         <div class="text-accentBlue/70 text-xs font-bold uppercase tracking-wider mb-2">Зв'язок</div>
                         <div class="font-medium text-sm">Мій досвід та супровід протягом 2 місяців</div>
-                    </div>
-                    <div>
-                        <div class="text-accentBlue/70 text-xs font-bold uppercase tracking-wider mb-2">Старт</div>
-                        <div class="font-medium text-xl text-accentGreen">15.05</div>
                     </div>
                 </div>
                 
@@ -553,10 +535,10 @@
     </section>
 
     <!-- Індивідуальне менторство (BRAND SYSTEM) -->
-    <section id="mentorship" class="py-24 md:py-32 px-6">
-        <div class="max-w-6xl mx-auto fade-up">
+    <section id="mentorship" class="py-24 md:py-32 px-6 scroll-mt-28">
+        <div class="max-w-6xl mx-auto">
             
-            <div class="text-center mb-20">
+            <div class="text-center mb-20 fade-up">
                 <h2 class="font-manrope text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">БРЕНД-СИСТЕМА: 1на1 💎</h2>
                 <p class="text-2xl font-bold mb-6 text-graphite">Побудова прибуткової моделі вашого бренду 1 на 1</p>
                 <p class="text-xl text-graphite/80 max-w-4xl mx-auto leading-relaxed">
@@ -667,7 +649,7 @@
                                 </ul>
                                 <div class="bg-accentGreen/10 border border-accentGreen/30 p-6 rounded-xl">
                                     <span class="font-bold uppercase tracking-wider text-xs text-accentGreen mb-2 block">Що ви отримаєте після цього етапу:</span>
-                                    <p class="font-medium">Ви бачите свій бізнес у цифрах, а не в ілюзіях. У вас є чіткий фінансовий план росту, ви знаєте свою точку беззбитковості та маєте чеклисти для найму команди, яка буде давати результат. Ви припиняєте працювати «волонтером» у власному бренді.</p>
+                                    <p class="font-medium">Ви чітко бачите свій бізнес у цифрах, спираючись на тверду аналітику. У вас є чіткий фінансовий план росту, ви знаєте свою точку беззбитковості та маєте чеклисти для найму команди, яка буде давати результат. Ви припиняєте працювати «волонтером» у власному бренді.</p>
                                 </div>
                             </div>
                         </div>
@@ -741,8 +723,8 @@
                 </div>
             </div>
 
-            <!-- Пакет супроводу -->
-            <div class="bg-[#1A1A1A] text-white rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl">
+            <!-- Пакет супроводу (Бренд Система) -->
+            <div class="bg-[#1A1A1A] text-white rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl fade-up">
                 <div class="absolute -right-20 -top-20 w-96 h-96 bg-accentGreen/10 rounded-full blur-3xl"></div>
                 <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
                 
@@ -752,22 +734,17 @@
                     <div>
                         <div class="text-4xl mb-4">🧠</div>
                         <h4 class="font-bold text-xl mb-3 text-accentGreen">Доступ до моїх мізків</h4>
-                        <p class="text-white/70 text-sm">Ми на зв'язку 5 днів на тиждень у Telegram. Я ваш фільтр для кожного стратегічного кроку та ідеї. Будь-який сумнів щодо ціни, тканини чи макета вирішуємо в моменті.</p>
+                        <p class="text-white/70 text-sm">Ми на зв'язку 5 днів на тиждень у Telegram. Я ваш фільтр для кожного стратегічного кроку та ідеї. Будь-який сумнів щодо стратегії, позиціонування чи рекламного макета вирішуємо в моменті.</p>
                     </div>
                     <div>
                         <div class="text-4xl mb-4">🗺️</div>
                         <h4 class="font-bold text-xl mb-3 text-accentGreen">Ваш Roadmap на майбутнє</h4>
-                        <p class="text-white/70 text-sm">Покроковий план самостійного розвитку бренду на 6 місяців вперед, щоб ви знали як рости далі без моєї щоденної участі.</p>
+                        <p class="text-white/70 text-sm">Детальна стратегія просування на пів року вперед. Ви чітко розумітимете, які кроки робити далі, щоб масштабувати результати самостійно.</p>
                     </div>
                     <div>
                         <div class="text-4xl mb-4">🗂️</div>
                         <h4 class="font-bold text-xl mb-3 text-accentGreen">База інструментів та бонусів</h4>
-                        <ul class="space-y-2 text-sm text-white/70">
-                            <li>• Усі авторські таблиці для аналізу.</li>
-                            <li>• Схеми зйомок та промпти для ШІ.</li>
-                            <li>• Ексклюзивний список: 30 перевірених інфлюенсерів України.</li>
-                            <li>• Розбір кейсів лідерів ринку (Джі-бар, Мілк Бар).</li>
-                        </ul>
+                        <p class="text-white/70 text-sm">Усі авторські таблиці для аналізу, схеми зйомок, промпти для ШІ та ексклюзивний список із 30 перевірених інфлюенсерів України.</p>
                     </div>
                 </div>
 
@@ -793,16 +770,20 @@
     <footer class="bg-lightGray border-t border-borderGray py-12 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
             <div>
-                <div class="font-manrope font-bold text-2xl tracking-tight mb-4 text-center md:text-left">Holdee <span class="text-accentBlue">marketer</span></div>
+                <div class="font-manrope font-bold text-2xl tracking-tight mb-4 text-center md:text-left">
+                    Holdee <span class="text-accentBlue">marketer</span>
+                </div>
                 <p class="text-sm text-graphite/60 max-w-xs text-center md:text-left font-medium">
                     Достатньо просто написати свій запит. Я розберуся, що з цим робити і як вам допомогти.
                 </p>
             </div>
             
-            <div class="text-center md:text-right">
-                <p class="text-sm text-graphite/60 mb-2 font-medium uppercase tracking-wider">Катя Чукіна</p>
-                <a href="https://www.instagram.com/holdee/" target="_blank" class="font-bold text-xl hover:text-accentBlue transition-colors flex items-center justify-center md:justify-end gap-2">
-                    <i class="ph ph-instagram-logo text-2xl"></i> @holdee
+            <div class="flex items-center justify-center md:justify-end gap-4">
+                <a href="https://t.me/holdee" target="_blank" class="text-graphite hover:text-accentBlue transition-colors" aria-label="Telegram">
+                    <i class="ph ph-telegram-logo text-3xl"></i>
+                </a>
+                <a href="https://www.instagram.com/holdee/" target="_blank" class="text-graphite hover:text-accentBlue transition-colors" aria-label="Instagram">
+                    <i class="ph ph-instagram-logo text-3xl"></i>
                 </a>
             </div>
         </div>
@@ -811,41 +792,11 @@
     <!-- Скрипт для анімацій при скролі -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-            const links = document.querySelectorAll('.mobile-link');
-
-            if (btn && menu) {
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                    menu.classList.toggle('flex');
-                    const icon = btn.querySelector('i');
-                    if(menu.classList.contains('flex')) {
-                        icon.classList.remove('ph-list');
-                        icon.classList.add('ph-x');
-                    } else {
-                        icon.classList.remove('ph-x');
-                        icon.classList.add('ph-list');
-                    }
-                });
-
-                links.forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.add('hidden');
-                        menu.classList.remove('flex');
-                        const icon = btn.querySelector('i');
-                        icon.classList.remove('ph-x');
-                        icon.classList.add('ph-list');
-                    });
-                });
-            }
-
             // Scroll animations
             const observerOptions = {
                 root: null,
-                rootMargin: '0px',
-                threshold: 0.1
+                rootMargin: '50px 0px',
+                threshold: 0.01
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
