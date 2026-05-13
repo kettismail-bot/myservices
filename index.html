@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катя Чукіна | Маркетинг-стратег</title>
+    
+    <!-- Підключення шрифтів -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Підключення іконок -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Підключення Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        graphite: '#1A1A1A',
+                        accentBlue: '#9ec0d2',
+                        accentGreen: '#aed98a',
+                        lightGray: '#F8F9FA',
+                        borderGray: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        manrope: ['Manrope', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Стилізація маркерів списку */
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .custom-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #9ec0d2;
+            font-size: 1.5rem;
+            line-height: 1.4rem;
+        }
+        .custom-list-green li::before {
+            color: #aed98a;
+        }
+
+        /* Сховати скролбар для навігації на мобільних */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-inter leading-relaxed selection:bg-accentBlue selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 bg-white/95 backdrop-blur-md z-50 border-b border-borderGray/50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-4">
+            
+            <!-- Always Visible Nav -->
+            <nav class="flex justify-start gap-6 sm:gap-10 md:gap-16 text-[14px] md:text-base font-semibold text-graphite/90 overflow-x-auto no-scrollbar w-full md:flex-grow">
+                <a href="#mentorship" class="hover:text-accentGreen transition-colors whitespace-nowrap">Менторство 1:1</a>
+                <a href="#program" class="hover:text-accentBlue transition-colors whitespace-nowrap">Програма</a>
+            </nav>
+
+            <a href="https://www.instagram.com/holdee/" target="_blank" class="bg-graphite text-white px-5 py-2.5 rounded-sm text-sm font-medium hover:bg-graphite/90 transition-colors shadow-sm hidden md:inline-block whitespace-nowrap shrink-0">
+                Написати в Direct
+            </a>
+            
+        </div>
+    </header>
+
+    <!-- Головний екран (Оффер Менторства) -->
+    <section id="mentorship" class="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-gradient-to-b from-lightGray/50 to-white scroll-mt-20">
+        <div class="max-w-5xl mx-auto text-center fade-up">
+            <span class="text-accentBlue font-bold tracking-widest uppercase text-sm mb-4 block">Маркетинг-менторство 1:1</span>
+            
+            <h1 class="font-manrope text-5xl md:text-7xl font-extrabold mb-6 tracking-tight uppercase">
+                Вийди з маркетинг-операційки
+            </h1>
+            <p class="text-xl md:text-3xl font-manrope font-semibold mb-12 text-graphite/90 max-w-4xl mx-auto leading-tight">
+                За 8 тижнів вийди з маркетинг-операційки — поверни собі 10+ годин на тиждень, які зараз йдуть на тушіння пожеж за твоєю командою.
+            </p>
+            
+            <!-- Опис болю клієнта -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl border border-borderGray/60 shadow-sm text-left max-w-4xl mx-auto relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 text-9xl opacity-5"><i class="ph ph-target"></i></div>
+                
+                <div class="space-y-4 text-graphite/80 text-lg relative z-10">
+                    <p><strong class="text-graphite">8 тижнів індивідуальної роботи</strong> для власників, які вимушено стали маркетологом і втомились закривати усі дірки за СММ та таргетологами.</p>
+                    <p>Це рішення для тих, хто змінював підрядників по 5 разів. Хто досі сам пише ТЗ, корегує креативи та перевіряє кожен пост. Бо без вас команда не тягне, а погляд на власний продукт вже замилюється.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок Довіри (Регалії) -->
+    <section class="py-12 px-6 border-y border-borderGray/50 bg-[#f0f4f7]">
+        <div class="max-w-5xl mx-auto fade-up">
+            <h2 class="font-manrope text-xs font-bold mb-8 text-center uppercase tracking-widest text-graphite/40">Чому мені можна довіряти</h2>
+            
+            <div class="grid sm:grid-cols-3 gap-8">
+                <div class="border-l-2 border-accentBlue pl-5">
+                    <div class="font-manrope font-extrabold text-3xl text-graphite mb-1">7+ років</div>
+                    <p class="text-sm text-graphite/70 font-medium">практичного досвіду: пройшла шлях від роботи руками до позиції Head of Marketing.</p>
+                </div>
+                <div class="border-l-2 border-accentBlue pl-5">
+                    <div class="font-manrope font-extrabold text-3xl text-graphite mb-1">40+ ніш</div>
+                    <p class="text-sm text-graphite/70 font-medium">від локальних крафтових брендів до послуг та масштабного e-commerce.</p>
+                </div>
+                <div class="border-l-2 border-accentBlue pl-5">
+                    <div class="font-manrope font-extrabold text-2xl md:text-3xl text-graphite mb-1 leading-tight">Була на вашому місці</div>
+                    <p class="text-sm text-graphite/70 font-medium">Сама була власницею бізнесу і чудово знаю, що таке бути «восьминогом», який тягне все на собі.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- А/Б Таблиця (Трансформація) -->
+            <div class="mb-24 fade-up">
+                <h3 class="font-manrope text-3xl font-bold mb-10 text-center uppercase tracking-widest">Ваші результати через 8 тижнів</h3>
+                
+                <div class="bg-white rounded-xl border border-borderGray shadow-sm overflow-hidden">
+                    <div class="grid grid-cols-2 bg-lightGray border-b border-borderGray p-4 md:p-6 text-center font-bold text-graphite/50 uppercase tracking-widest text-xs md:text-sm">
+                        <div>Зараз</div>
+                        <div>Після супроводу</div>
+                    </div>
+                    
+                    <div class="divide-y divide-borderGray/50">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6 md:p-8 flex items-center gap-4 text-graphite/70 border-b md:border-b-0 md:border-r border-borderGray/50 bg-red-50/30">
+                                <i class="ph ph-x-circle text-red-400 text-3xl shrink-0"></i>
+                                <p>Контролюю кожен пост і креатив, бо без мене команда не тягне</p>
+                            </div>
+                            <div class="p-6 md:p-8 flex items-center gap-4 bg-accentGreen/5">
+                                <i class="ph ph-check-circle text-accentGreen text-3xl shrink-0"></i>
+                                <p class="font-bold text-graphite">Ставлю стратегічні напрямки = команда їх виконує</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6 md:p-8 flex items-center gap-4 text-graphite/70 border-b md:border-b-0 md:border-r border-borderGray/50 bg-red-50/30">
+                                <i class="ph ph-x-circle text-red-400 text-3xl shrink-0"></i>
+                                <p>Я і власник, і маркетолог, і стратег — замилюється око</p>
+                            </div>
+                            <div class="p-6 md:p-8 flex items-center gap-4 bg-accentGreen/5">
+                                <i class="ph ph-check-circle text-accentGreen text-3xl shrink-0"></i>
+                                <p class="font-bold text-graphite">Я знову власник. Стратег - це я (на наш період)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6 md:p-8 flex items-center gap-4 text-graphite/70 border-b md:border-b-0 md:border-r border-borderGray/50 bg-red-50/30">
+                                <i class="ph ph-x-circle text-red-400 text-3xl shrink-0"></i>
+                                <p>Зміняла N-ну СММ/таргетолога — результат той самий</p>
+                            </div>
+                            <div class="p-6 md:p-8 flex items-center gap-4 bg-accentGreen/5">
+                                <i class="ph ph-check-circle text-accentGreen text-3xl shrink-0"></i>
+                                <p class="font-bold text-graphite">Розумію, чи проблема в людях, чи в системі</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6 md:p-8 flex items-center gap-4 text-graphite/70 border-b md:border-b-0 md:border-r border-borderGray/50 bg-red-50/30">
+                                <i class="ph ph-x-circle text-red-400 text-3xl shrink-0"></i>
+                                <p>Запускаю креативи навмання — не знаю, що тестити</p>
+                            </div>
+                            <div class="p-6 md:p-8 flex items-center gap-4 bg-accentGreen/5">
+                                <i class="ph ph-check-circle text-accentGreen text-3xl shrink-0"></i>
+                                <p class="font-bold text-graphite">Маю чітку логіку: яка гіпотеза, на яку аудиторію, з якою метрикою</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6 md:p-8 flex items-center gap-4 text-graphite/70 border-b md:border-b-0 md:border-r border-borderGray/50 bg-red-50/30">
+                                <i class="ph ph-x-circle text-red-400 text-3xl shrink-0"></i>
+                                <p>Раніше "просто працювало" — зараз не розумію, чому ні</p>
+                            </div>
+                            <div class="p-6 md:p-8 flex items-center gap-4 bg-accentGreen/5">
+                                <i class="ph ph-check-circle text-accentGreen text-3xl shrink-0"></i>
+                                <p class="font-bold text-graphite">Маю стратегію на 6 місяців уперед, з якою живу спокійно</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Що входить у супровід -->
+            <div class="mb-24 fade-up">
+                <h3 class="font-manrope text-3xl md:text-4xl font-bold mb-12 text-center uppercase">Що входить у супровід</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded-xl border border-borderGray/50 shadow-sm hover:border-accentBlue transition-colors">
+                        <i class="ph ph-handshake text-accentBlue text-5xl mb-6 block"></i>
+                        <h4 class="font-bold text-xl mb-3 text-graphite">Стратегічна робота 1:1</h4>
+                        <p class="text-graphite/70 text-sm leading-relaxed">Раз на тиждень сідаємо на 1,5 години і розбираємо конкретний вузол: бренд, продукт, рекламу, контент чи команду. Ви приймаєте рішення під свій бізнес, я підказую куди дивитись і де точки росту.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl border border-borderGray/50 shadow-sm hover:border-accentBlue transition-colors">
+                        <i class="ph ph-brain text-accentBlue text-5xl mb-6 block"></i>
+                        <h4 class="font-bold text-xl mb-3 text-graphite">Мій досвід у Telegram</h4>
+                        <p class="text-graphite/70 text-sm leading-relaxed">На зв'язку 5 днів на тиждень. Будь-яке стратегічне питання — креатив таргетолога, ідея СММ, рішення про новий канал обговорюємо в моменті, а не чекаємо наступної зустрічі.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl border border-borderGray/50 shadow-sm hover:border-accentBlue transition-colors">
+                        <i class="ph ph-map-trifold text-accentBlue text-5xl mb-6 block"></i>
+                        <h4 class="font-bold text-xl mb-3 text-graphite">Roadmap на 6 місяців</h4>
+                        <p class="text-graphite/70 text-sm leading-relaxed">Покроковий план самостійного розвитку. Ви отримуєте структуровану систему, з якою проєкт живе і масштабується наступні пів року вже без моєї щоденної участі.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Програма 8 тижнів (Очищена від ШІ-шаблонів) -->
+            <div id="program" class="mb-24 fade-up scroll-mt-24">
+                <div class="bg-lightGray p-6 md:p-8 rounded-xl border border-borderGray/50 mb-8 flex flex-col lg:flex-row justify-between gap-8 lg:items-center">
+                    <div class="lg:max-w-xl">
+                        <h3 class="font-manrope text-3xl font-bold mb-3 uppercase">Програма супроводу</h3>
+                        <p class="text-graphite/70 text-sm leading-relaxed">
+                            <strong class="text-graphite">Логіка:</strong> кожен тиждень ми закриваємо один фундаментальний блок. На 8-му тижні всі напрацювання збираються в єдину робочу систему.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+                        <div class="bg-white p-5 rounded-xl border border-borderGray/50 shadow-sm flex-1">
+                            <div class="text-accentBlue text-xs font-bold uppercase tracking-wider mb-1">Формат</div>
+                            <div class="text-sm font-medium text-graphite">1 зустріч 90-120 хв на тиждень<br><span class="text-graphite/60 font-normal">+ Telegram-супровід 5 днів</span></div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-borderGray/50 shadow-sm flex-1 sm:min-w-[140px]">
+                            <div class="text-accentBlue text-xs font-bold uppercase tracking-wider mb-1">Тривалість</div>
+                            <div class="text-sm font-medium text-graphite text-xl">2 місяці</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Детальна програма -->
+                <div class="space-y-6">
+                    
+                    <!-- Тиждень 1 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">01</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Аналітика і точка А</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                побачити, де в поточному маркетингу зливаються гроші, а де вони реально заробляються і отримати цифри, на яких будуємо стратегію.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Звіти команди за квартал = що смм і таргетолог дали, чого в роботі не вистачає</li>
+                                <li>Клієнтська база: хто активний, хто давно не купував, хто купує постійно і що з ними робити далі</li>
+                                <li>Скільки коштує один клієнт і скільки він приносить</li>
+                                <li>Які цифри важливо контролювати щотижня</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 2 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">02</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Позиціонування і характер бренду + ЦА</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                отримати чітке формулювання, чому клієнт обирає бренд і готовий платити більше = щоб ми могли перекласти позиціонування на кожен канал.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Поточне позиціонування (бренд-бук / айдентика) = що працює, що застаріло</li>
+                                <li>Хто твій клієнт?</li>
+                                <li>Місце на ринку = хто конкуренти, де бренд сильніший, де програє</li>
+                                <li>ToV = серйозний чи легкий, експертний чи дружній, що транслюємо, а що - ні</li>
+                                <li>Слова, фрази, образи, які працюють на бренд - і список того, що ніколи не використовуємо, щоб будувати цілісне сприйняття бренду</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 3 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">03</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Продуктова матриця і фокус</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                обрати продукти-локомотиви, на яких реклама і контент починають окуповуватись, а не зливатись по всьому асортименту.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Який продукт затягує нового клієнта</li>
+                                <li>Який продукт основний, на якому заробляємо</li>
+                                <li>Який продукт для збільшення чека</li>
+                                <li>Скільки реально приносить кожен з обраних</li>
+                                <li>Як підняти чек з тих, хто вже купує/купував колись</li>
+                                <li>B2B-блок, якщо є канал</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 4 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">04</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Робота з гарячим трафіком</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                запустити продажі по тих, хто вже знає бренд (купував, купує, реанімувати базу).
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list mb-4">
+                                <li>Як зробити так, щоб активні клієнти купували частіше</li>
+                                <li>Як повернути тих, хто колись купив і пропав (стратегія повернення)</li>
+                                <li>Як перетворити постійних на тих, хто рекомендує</li>
+                                <li>Через які канали з ними говорити: розсилка, директ, вайбер, пошта</li>
+                                <li>Як працювати підрядникам з базою</li>
+                            </ul>
+                            <div class="p-3 border border-[#E5E5E5] bg-[#F8F9FA] rounded-lg text-xs text-graphite/70 flex gap-2 items-start shadow-sm">
+                                <span class="text-sm">⚠️</span>
+                                <p>Це гнучкий блок, залежно від запиту, бо не у всіх є база, але 100% є інші питання, які треба розглянути глибше.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 5 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">05</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Воронка холодного трафіку</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                побудувати воронку, з якою холодна аудиторія доходить до покупки, а реклама окуповується.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Шлях клієнта: де ловимо вперше → де прогріваємо → де купує → як стає постійним</li>
+                                <li>Звідки беремо нову аудиторію: схожі на базу, безкоштовний матеріал, контент, партнерства</li>
+                                <li>Що говоримо новим, теплим і тим, хто майже купив</li>
+                                <li>Яке ТЗ дати таргетологу</li>
+                                <li>Як читати результати реклами і вирішувати продовжуємо чи зупиняємо</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 6 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">06</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Контент і канали</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                отримати контент-план, де кожен пост частина воронки на продаж.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Як побудувати контент в Instagram, щоб він прогрівав до покупки</li>
+                                <li>Які додаткові канали підключити: Threads, TikTok, блог сайту, розсилка = обираємо під бізнес, в залежності від ніші канальна воронка буде різна</li>
+                                <li>Як побудувати систему UGC: контент-креейтори, блогери, клієнти</li>
+                                <li>Яке ТЗ дати смм-нику під нову систему</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 7 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-white border border-borderGray/60 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentBlue font-manrope font-extrabold text-4xl mb-2 opacity-50">07</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Управлінська рамка і метрики</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-accentBlue/10 px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentBlue/20">
+                                <span class="text-accentBlue font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                перестати правити і контролювати кожен крок команди і керувати маркетингом через задачі і метрики.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що розбираємо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list">
+                                <li>Як ставити задачі команді = щоб виконували без щоденного смикання</li>
+                                <li>Ритм зустрічей з командою: що питаємо щотижня, що раз на місяць</li>
+                                <li>Які метрики контролює власник, які збирає команда</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Тиждень 8 -->
+                    <div class="p-6 md:p-8 rounded-xl bg-accentGreen/10 border border-accentGreen/40 flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div class="md:w-1/4 shrink-0">
+                            <div class="text-accentGreen font-manrope font-extrabold text-4xl mb-2">08</div>
+                            <h4 class="font-manrope font-bold text-xl text-graphite">Збірка стратегії на 6 місяців</h4>
+                        </div>
+                        <div class="md:w-3/4">
+                            <div class="bg-white px-5 py-4 rounded-lg mb-5 text-graphite/90 font-medium text-sm border border-accentGreen/30 shadow-sm">
+                                <span class="text-accentGreen font-extrabold uppercase tracking-wider text-xs block mb-1">Ціль зустрічі:</span>
+                                отримати готову стратегію на 6 місяців.
+                            </div>
+                            <strong class="block text-graphite mb-3 text-base font-manrope">Що робимо:</strong>
+                            <ul class="space-y-2 text-sm text-graphite/80 custom-list-green">
+                                <li>З'єднуємо всі блоки в єдину стратегію на 6 місяців</li>
+                                <li>Розписуємо по місяцях: що тестуємо, що масштабуємо, на що дивимось</li>
+                                <li>Визначаємо контрольні точки: коли заміряємо результат, коли запускаємо нові блоки</li>
+                                <li>Що йде паралельно, що послідовно</li>
+                                <li>Прощаємось 🙌</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Етапи співпраці (Як почати) -->
+            <div class="mb-16 fade-up">
+                <h3 class="font-manrope text-2xl font-bold mb-8 text-center uppercase tracking-widest text-graphite/60 text-sm">Етапи початку співпраці</h3>
+                
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div class="bg-lightGray p-6 rounded-xl border border-borderGray/60 relative">
+                        <div class="text-accentBlue font-extrabold text-xl mb-2">01</div>
+                        <strong class="block text-graphite text-base mb-1 font-manrope">Запит у Direct</strong>
+                        <p class="text-sm text-graphite/70 leading-relaxed">Ви коротко описуєте свою нішу, поточну ситуацію в маркетингу та головний запит на масштабування.</p>
+                    </div>
+                    <div class="bg-lightGray p-6 rounded-xl border border-borderGray/60 relative">
+                        <div class="text-accentBlue font-extrabold text-xl mb-2">02</div>
+                        <strong class="block text-graphite text-base mb-1 font-manrope">Знайомство (15 хв)</strong>
+                        <p class="text-sm text-graphite/70 leading-relaxed">Безкоштовний зідзвін. Синхронізуємось, щоб зрозуміти, чи комфортно нам буде працювати разом.</p>
+                    </div>
+                    <div class="bg-lightGray p-6 rounded-xl border border-borderGray/60 relative">
+                        <div class="text-accentGreen font-extrabold text-xl mb-2">03</div>
+                        <strong class="block text-graphite text-base mb-1 font-manrope">Старт роботи</strong>
+                        <p class="text-sm text-graphite/70 leading-relaxed">Узгоджуємо графік зустрічей, ви вносите оплату — і ми починаємо роботу.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок ціни Менторства -->
+            <div id="price" class="bg-[#1A1A1A] text-white rounded-2xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl fade-up relative overflow-hidden scroll-mt-24">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-accentGreen/20 rounded-full blur-3xl"></div>
+                
+                <div class="text-center md:text-left relative z-10">
+                    <h4 class="font-manrope font-bold text-2xl mb-2 text-accentGreen">Готові побудувати систему?</h4>
+                    <p class="text-white/70 text-sm mb-3">Кількість місць в індивідуальну роботу обмежена.</p>
+                    <span class="inline-block px-3 py-1 bg-white/10 rounded-md text-xs text-white/90 font-medium border border-white/20">
+                        ✦ Можливе комфортне розтермінування (оплата частинами)
+                    </span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6 relative z-10 w-full md:w-auto">
+                    <div class="text-4xl font-manrope font-extrabold whitespace-nowrap">29 000 грн</div>
+                    <a href="https://www.instagram.com/holdee/" target="_blank" class="bg-accentGreen text-graphite px-10 py-4 rounded-sm font-bold text-lg hover:bg-white transition-colors w-full sm:w-auto text-center shadow-[0_0_20px_rgba(174,217,138,0.3)]">
+                        Написати в Direct
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-lightGray border-t border-borderGray py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div>
+                <div class="font-manrope font-bold text-xl tracking-tight mb-3 text-center md:text-left">
+                    Катя Чукіна <span class="text-accentBlue font-medium text-sm">| Маркетинг-стратег</span>
+                </div>
+                <p class="text-sm text-graphite/60 max-w-sm text-center md:text-left font-medium">
+                    Готові побудувати системний маркетинг? Напишіть мені в Direct для запису на коротку зустріч-знайомство.
+                </p>
+            </div>
+            
+            <div class="flex items-center justify-center md:justify-end gap-4">
+                <a href="https://t.me/holdee" target="_blank" class="text-graphite hover:text-accentBlue transition-colors" aria-label="Telegram">
+                    <i class="ph ph-telegram-logo text-3xl"></i>
+                </a>
+                <a href="https://www.instagram.com/holdee/" target="_blank" class="text-graphite hover:text-accentBlue transition-colors" aria-label="Instagram">
+                    <i class="ph ph-instagram-logo text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для анімацій при скролі -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '50px 0px',
+                threshold: 0.01
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
